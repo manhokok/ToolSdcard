@@ -13,7 +13,7 @@ mkdir -p /data/data/com.termux/files/home/storage
 apt install ffmpeg -y
 
 # Clone repository Peridot
-git clone https://github.com/manhokok/MP4-to-MP3.git
+git clone https://github.com/manhokok/ToolSdcard.git
 
 # Di chuyển tất cả file vào thư mục chính của Termux
 mv Peridot/* /data/data/com.termux/files/home/
