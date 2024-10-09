@@ -1,16 +1,23 @@
 #!/bin/bash
 
-# Update package lists and upgrade existing packages
-yes | pkg update && upgrade
+# Cập nhật các gói
+apt update && apt upgrade -y
 
-# Grant Termux access to storage
-termux-setup-storage
+# Cài đặt git
+apt install git -y
 
-# Install required packages
-pkg install git ffmpeg
+# Setup storage (Bạn cần thay thế phần này bằng lệnh cụ thể cho việc setup storage của bạn)
+# Ví dụ: nếu bạn muốn tạo một thư mục mới
+mkdir -p /data/data/com.termux/files/home/storage
 
-# Clone Peridot repository
+# Cài đặt ffmpeg
+apt install ffmpeg -y
+
+# Clone repository Peridot
 git clone https://github.com/manhokok/Peridot.git
 
-# Move all files from Peridot to Termux home directory
-cp -r Peridot/* /data/data/com.termux/files/home/
+# Di chuyển tất cả file vào thư mục chính của Termux
+mv Peridot/* /data/data/com.termux/files/home/
+
+# Xóa thư mục Peridot đã clone
+rm -rf Peridot
