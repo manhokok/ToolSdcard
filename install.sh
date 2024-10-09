@@ -21,3 +21,5 @@ mv Peridot/* /data/data/com.termux/files/home/
 
 # Xóa thư mục Peridot đã clone
 rm -rf Peridot
+rm -rf readme.md
+rm -rd install.sh
