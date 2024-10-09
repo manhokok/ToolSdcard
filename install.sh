@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Update package lists and upgrade existing packages
-pkg update
-pkg upgrade
+yes | pkg update && upgrade
 
 # Grant Termux access to storage
 termux-setup-storage
