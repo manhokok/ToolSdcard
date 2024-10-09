@@ -6,8 +6,7 @@ apt update && apt upgrade -y
 # Cài đặt git
 apt install git -y
 
-# Setup storage (Bạn cần thay thế phần này bằng lệnh cụ thể cho việc setup storage của bạn)
-# Ví dụ: nếu bạn muốn tạo một thư mục mới
+# Setup storage
 mkdir -p /data/data/com.termux/files/home/storage
 
 # Cài đặt ffmpeg
