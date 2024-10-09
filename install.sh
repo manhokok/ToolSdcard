@@ -16,9 +16,9 @@ apt install ffmpeg -y
 git clone https://github.com/manhokok/ToolSdcard.git
 
 # Di chuyển tất cả file vào thư mục chính của Termux
-mv Peridot/* /data/data/com.termux/files/home/
+mv ToolSdcard/* /data/data/com.termux/files/home/
 
 # Xóa thư mục Peridot đã clone
-rm -rf Peridot
+rm -rf ToolSdcard
 rm -rf readme.md
 rm -rd install.sh
