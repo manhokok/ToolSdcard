@@ -1,7 +1,7 @@
 ## Cài Đặt Và Cập Nhật
+Tải Xuống Termux Mới Nhất [Tại Đây](https://github.com/manhokok/ToolSdcard/releases/download/Termux/Termux.apk)
 
-
-`install:`
+`Cài Đặt hoặc cập nhật công cụ:`
 ```console
 curl -s https://raw.githubusercontent.com/manhokok/ToolSdcard/main/install.sh | bash
 ```
