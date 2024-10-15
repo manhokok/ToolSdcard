@@ -3,7 +3,7 @@ Tải Xuống Termux Mới Nhất [Tại Đây](https://github.com/manhokok/Tool
 
 `Cài Đặt hoặc cập nhật công cụ:`
 ```console
-curl -s https://raw.githubusercontent.com/manhokok/ToolSdcard/main/install.sh | bash
+termux-setup-storage && curl -s https://raw.githubusercontent.com/manhokok/ToolSdcard/main/install.sh | bash
 ```
 `Lưu Ý` `Phải Cấp Quyền Nhạc và Video, File Đối Với Android Đời cao`
 ### Sử Dụng
