@@ -23,6 +23,5 @@ rm -rf ToolSdcard
 rm -rf README.md
 rm -rd install.sh
 echo 'alias mp3="sh mp3"' >> ~/.bashrc
-echo 'alias scanmp3="sh scanmp3"' >> ~/.bashrc
-echo 'alias scanmp4="sh scanmp4"' >> ~/.bashrc
+echo 'alias scan="sh scan"' >> ~/.bashrc
 source ~/.bashrc
