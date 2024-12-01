@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# Thư mục nguồn (SDcard)
+source_dir="/sdcard"
+
+# Thư mục đích (để chứa các file MP3)
+destination_dir="/sdcard/mp3"
+
+# Tạo thư mục đích nếu chưa tồn tại
+mkdir -p "$destination_dir"
+
+# Hàm để di chuyển file MP3 và hiển thị thông báo
+move_mp3() {
+  for file in "$1"/*.mp3; do
+    if [ -f "$file" ]; then
+      mv "$file" "$destination_dir"
+      echo "Đã di chuyển: $file"
+    fi
+  done
+}
+
+# Hàm đệ quy để quét các thư mục con
+find_and_move() {
+  for dir in "$1"/*; do
+    if [ -d "$dir" ]; then
+      echo "Đang quét thư mục: $dir"
+      find_and_move "$dir"
+    fi
+  done
+  move_mp3 "$1"
+}
+
+# Bắt đầu quét và di chuyển
+find_and_move "$source_dir"
+
+# Thư mục nguồn (SDcard)
+source_dir="/sdcard"
+
+# Thư mục đích (để chứa các file MP4)
+destination_dir="/sdcard/mp4"
+
+# Tạo thư mục đích nếu chưa tồn tại
+mkdir -p "$destination_dir"
+
+# Hàm để di chuyển file MP4 và hiển thị thông báo
+move_mp4() {
+  for file in "$1"/*.mp4; do  # Thay đổi từ .mp3 thành .mp4 ở đây
+    if [ -f "$file" ]; then
+      mv "$file" "$destination_dir"
+      echo "Đã di chuyển: $file"
+    fi
+  done
+}
+
+# Hàm đệ quy để quét các thư mục con
+find_and_move() {
+  for dir in "$1"/*; do
+    if [ -d "$dir" ]; then
+      echo "Đang quét thư mục: $dir"
+      find_and_move "$dir"
+    fi
+  done
+  move_mp4 "$1"
+}
+
+# Bắt đầu quét và di chuyển
+find_and_move "$source_dir"
